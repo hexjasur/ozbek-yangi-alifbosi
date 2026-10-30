@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="uz" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Yangi O'zbek Alifbosi - Harflar Nusxalash va Onlayn O'girgich (Ö, Ğ, Ç, Ş)</title>
+    <meta name="title" content="Yangi O'zbek Alifbosi - Harflar Nusxalash va Onlayn O'girgich (Ö, Ğ, Ç, Ş)">
+    <meta name="description" content="Yangi o'zbek lotin alifbosi islohoti harflari (Ö, ö, Ğ, ğ, Ç, ç, Ş, ş) uchun tezkor onlayn nusxalash va matnlarni avtomatik o'girish (konvertor) xizmati. 100% bepul va qulay.">
+    <meta name="keywords" content="yangi ozbek alifbosi, yangi o'zbek alifbosi, o'zbek alifbosi yangi harflar, lotin alifbosi yangi harflari, yangi harflar nusxalash, alifbo o'girgich, lotin konvertor, Ö harfi, Ğ harfi, Ç harfi, Ş harfi, yangi imlo, o'zbekcha klaviatura">
+    <meta name="author" content="O'zbek Alifbosi Jamoasi">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#4f46e5">
+
+    <!-- Open Graph / Facebook / Telegram -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uz_UZ">
+    <meta property="og:title" content="Yangi O'zbek Alifbosi - Harflar Nusxalash va Onlayn O'girgich (Ö, Ğ, Ç, Ş)">
+    <meta property="og:description" content="Yangi o'zbek alifbosi harflarini bir marta bosish orqali nusxalang va matnlaringizni yangi imloga avtomatik o'giring.">
+    <meta property="og:site_name" content="Yangi O'zbek Alifbosi">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yangi O'zbek Alifbosi - Onlayn O'girgich">
+    <meta name="twitter:description" content="Yangi o'zbek lotin alifbosi harflari va matn konvertori.">
+
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%234f46e5'/><text x='50%' y='68%' font-size='60' font-weight='900' fill='white' font-family='sans-serif' text-anchor='middle'>Ö</text></svg>">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Schema.org JSON-LD Structured Data for Google SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Yangi O'zbek Alifbosi Onlayn O'girgich",
+      "url": "https://github.com",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "description": "Yangi o'zbek lotin alifbosi islohoti harflari (Ö, ö, Ğ, ğ, Ç, ç, Ş, ş) uchun tezkor onlayn nusxalash va matnlarni avtomatik o'girish xizmati.",
+      "inLanguage": "uz",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .toast {
+            transform: translateY(120%) scale(0.9);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .toast.show {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.4);
+        }
+        .active-letter:active {
+            transform: scale(0.92);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white antialiased">
+
+    <!-- Top Glow Background Accent -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-indigo-600/15 via-violet-600/5 to-transparent blur-3xl -z-10 pointer-events-none"></div>
+
+    <!-- Header Section -->
+    <header class="bg-slate-900/80 backdrop-blur-xl border-b border-slate-800/80 sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between gap-4">
+            
+            <!-- Logo & Brand -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 via-indigo-600 to-violet-600 flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-indigo-500/25 ring-1 ring-white/20 group-hover:scale-105 transition-transform duration-300">
+                    Ö
+                </div>
+                <div>
+                    <h1 class="text-base sm:text-lg font-extrabold text-white tracking-tight flex items-center gap-2">
+                        O'zbek Alifbosi
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-gradient-to-r from-indigo-500/20 to-violet-500/20 text-indigo-300 border border-indigo-500/30 uppercase tracking-wider">
+                            Yangi Isloh
+                        </span>
+                    </h1>
+                    <p class="text-xs text-slate-400 hidden sm:block">Harflarni tezkor nusxalash va onlayn matn o'girgich</p>
+                </div>
+            </a>
+            
+            <!-- Quick Actions -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <button onclick="copyAllNewLetters()" class="text-xs font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white px-3.5 py-2 rounded-xl transition-all duration-200 flex items-center gap-2 shadow-lg shadow-indigo-600/25 active:scale-95">
+                    <i class="fa-solid fa-copy text-indigo-200"></i>
+                    <span class="hidden md:inline">Barcha yangi harflar</span>
+                    <span class="md:hidden">Ö ö Ğ ğ Ç ç Ş ş</span>
+                </button>
+
+                <button onclick="shareApp()" title="Ulashish" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white p-2 sm:px-3 sm:py-2 rounded-xl border border-slate-700 transition active:scale-95 flex items-center gap-1.5">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span class="hidden sm:inline">Ulashish</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full space-y-8">
+
+        <!-- INTRO BANNER -->
+        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-950/60 via-slate-900 to-slate-900/80 border border-indigo-500/20 p-5 sm:p-7 shadow-2xl">
+            <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="space-y-2 max-w-2xl">
+                    <div class="inline-flex items-center gap-2 text-xs font-semibold text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">
+                        <i class="fa-solid fa-bolt"></i> Yangilangan standart bo'yicha
+                    </div>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight">
+                        Yangi harflardan oson va tez foydalaning!
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        Klaviaturangizda yangi harflar (<strong class="text-indigo-300 font-semibold">Ö, Ğ, Ç, Ş</strong>) yo'qmi? Kerakli harfni bitta bosish orqali nusxalang yoki butun matningizni avtomatik yangi imloga o'giring.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 items-center">
+                    <a href="#converter" class="text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-xl transition flex items-center gap-2 shadow-lg shadow-indigo-600/30">
+                        <i class="fa-solid fa-arrows-rotate"></i> Matn O'girgich
+                    </a>
+                    <a href="#guide" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white px-4 py-2.5 rounded-xl border border-slate-700 transition flex items-center gap-2">
+                        <i class="fa-solid fa-book-open"></i> Isloh haqida
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: Maxsus Yangi Harflar (Katta va Kichik) -->
+        <section class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <div>
+                    <h2 class="text-sm font-extrabold text-white uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-wand-magic-sparkles text-indigo-400"></i>
+                        Asosiy Yangi Harflar (Tezkor Nusxa)
+                    </h2>
+                    <p class="text-xs text-slate-400">Bir marta bosish kifoya — harf to'g'ridan-to'g'ri xotiraga olinadi</p>
+                </div>
+                <span class="text-[11px] font-medium text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded-lg border border-indigo-500/20 self-start sm:self-auto">
+                    <i class="fa-solid fa-fingerprint mr-1"></i> 1 marta bosing
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- Ö / ö CARD -->
+                <div class="bg-slate-900/90 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-4 transition-all duration-300 shadow-md hover:shadow-indigo-500/10 space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-400">
+                        <span class="font-medium flex items-center gap-1.5">
+                            <span class="text-slate-500">Oldingi:</span>
+                            <span class="text-amber-300 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded font-mono font-bold">O' o'</span>
+                        </span>
+                        <span class="text-[11px] font-bold text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-full border border-indigo-500/20">Umlaut</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <button onclick="copyText('Ö', 'Katta Ö harfi')" title="Nusxalash uchun bosing" class="group relative bg-slate-950 hover:bg-indigo-600 border border-slate-800 hover:border-indigo-500 rounded-xl py-3.5 flex flex-col items-center justify-center transition active-letter glow-hover">
+                            <span class="text-3xl font-black text-indigo-400 group-hover:text-white transition-colors">Ö</span>
+                            <span class="text-[11px] text-slate-400 group-hover:text-indigo-100 mt-1 font-semibold flex items-center gap-1">
+                                Katta <i class="fa-regular fa-copy text-[10px]"></i>
+                            </span>
+                        </button>
+                        <button onclick="copyText('ö', 'Kichik ö harfi')" title="Nusxalash uchun bosing" class="group relative bg-slate-950 hover:bg-indigo-600 border border-slate-800 hover:border-indigo-500 rounded-xl py-3.5 flex flex-col items-center justify-center transition active-letter glow-hover">
+                            <span class="text-3xl font-black text-indigo-400 group-hover:text-white transition-colors">ö</span>
+                            <span class="text-[11px] text-slate-400 group-hover:text-indigo-100 mt-1 font-semibold flex items-center gap-1">
+                                Kichik <i class="fa-regular fa-copy text-[10px]"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="text-[11px] text-slate-400 text-center pt-1 border-t border-slate-800/80">
+                        Misol: <span class="text-slate-200 font-medium">Özbekiston, örik, köz</span>
+                    </div>
+                </div>
+
+                <!-- Ğ / ğ CARD -->
+                <div class="bg-slate-900/90 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-4 transition-all duration-300 shadow-md hover:shadow-indigo-500/10 space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-400">
+                        <span class="font-medium flex items-center gap-1.5">
+                            <span class="text-slate-500">Oldingi:</span>
+                            <span class="text-amber-300 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded font-mono font-bold">G' g'</span>
+                        </span>
+                        <span class="text-[11px] font-bold text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-full border border-indigo-500/20">Breve</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <button onclick="copyText('Ğ', 'Katta Ğ harfi')" title="Nusxalash uchun bosing" class="group relative bg-slate-950 hover:bg-indigo-600 border border-slate-800 hover:border-indigo-500 rounded-xl py-3.5 flex flex-col items-center justify-center transition active-letter glow-hover">
+                            <span class="text-3xl font-black text-indigo-400 group-hover:text-white transition-colors">Ğ</span>
+                            <span class="text-[11px] text-slate-400 group-hover:text-indigo-100 mt-1 font-semibold flex items-center gap-1">
+                                Katta <i class="fa-regular fa-copy text-[10px]"></i>
+                            </span>
+                        </button>
+                        <button onclick="copyText('ğ', 'Kichik ğ harfi')" title="Nusxalash uchun bosing" class="group relative bg-slate-950 hover:bg-indigo-600 border border-slate-800 hover:border-indigo-500 rounded-xl py-3.5 flex flex-col items-center justify-center transition active-letter glow-hover">
+                            <span class="text-3xl font-black text-indigo-400 group-hover:text-white transition-colors">ğ</span>
+                            <span class="text-[11px] text-slate-400 group-hover:text-indigo-100 mt-1 font-semibold flex items-center gap-1">
+                                Kichik <i class="fa-regular fa-copy text-[10px]"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="text-[11px] text-slate-400 text-center pt-1 border-t border-slate-800/80">
+                        Misol: <span class="text-slate-200 font-medium">Ğalaba, boğbon, toğ</span>
+                    </div>
+                </div>
+
+                <!-- Ç / ç CARD -->
+                <div class="bg-slate-900/90 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-4 transition-all duration-300 shadow-md hover:shadow-indigo-500/10 space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-400">
+                        <span class="font-medium flex items-center gap-1.5">
+                            <span class="text-slate-500">Oldingi:</span>
+                            <span class="text-amber-300 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded font-mono font-bold">Ch ch</span>
+                        </span>
+                        <span class="text-[11px] font-bold text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-full border border-indigo-500/20">Sedilla</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <button onclick="copyText('Ç', 'Katta Ç harfi')" title="Nusxalash uchun bosing" class="group relative bg-slate-950 hover:bg-indigo-600 border border-slate-800 hover:border-indigo-500 rounded-xl py-3.5 flex flex-col items-center justify-center transition active-letter glow-hover">
+                            <span class="text-3xl font-black text-indigo-400 group-hover:text-white transition-colors">Ç</span>
+                            <span class="text-[11px] text-slate-400 group-hover:text-indigo-100 mt-1 font-semibold flex items-center gap-1">
+                                Katta <i class="fa-regular fa-copy text-[10px]"></i>
+                            </span>
+                        </button>
+                        <button onclick="copyText('ç', 'Kichik ç harfi')" title="Nusxalash uchun bosing" class="group relative bg-slate-950 hover:bg-indigo-600 border border-slate-800 hover:border-indigo-500 rounded-xl py-3.5 flex flex-col items-center justify-center transition active-letter glow-hover">
+                            <span class="text-3xl font-black text-indigo-400 group-hover:text-white transition-colors">ç</span>
+                            <span class="text-[11px] text-slate-400 group-hover:text-indigo-100 mt-1 font-semibold flex items-center gap-1">
+                                Kichik <i class="fa-regular fa-copy text-[10px]"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="text-[11px] text-slate-400 text-center pt-1 border-t border-slate-800/80">
+                        Misol: <span class="text-slate-200 font-medium">Çayxana, çiroq, qeliç</span>
+                    </div>
+                </div>
+
+                <!-- Ş / ş CARD -->
+                <div class="bg-slate-900/90 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-4 transition-all duration-300 shadow-md hover:shadow-indigo-500/10 space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-400">
+                        <span class="font-medium flex items-center gap-1.5">
+                            <span class="text-slate-500">Oldingi:</span>
+                            <span class="text-amber-300 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded font-mono font-bold">Sh sh</span>
+                        </span>
+                        <span class="text-[11px] font-bold text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-full border border-indigo-500/20">Sedilla</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <button onclick="copyText('Ş', 'Katta Ş harfi')" title="Nusxalash uchun bosing" class="group relative bg-slate-950 hover:bg-indigo-600 border border-slate-800 hover:border-indigo-500 rounded-xl py-3.5 flex flex-col items-center justify-center transition active-letter glow-hover">
+                            <span class="text-3xl font-black text-indigo-400 group-hover:text-white transition-colors">Ş</span>
+                            <span class="text-[11px] text-slate-400 group-hover:text-indigo-100 mt-1 font-semibold flex items-center gap-1">
+                                Katta <i class="fa-regular fa-copy text-[10px]"></i>
+                            </span>
+                        </button>
+                        <button onclick="copyText('ş', 'Kichik ş harfi')" title="Nusxalash uchun bosing" class="group relative bg-slate-950 hover:bg-indigo-600 border border-slate-800 hover:border-indigo-500 rounded-xl py-3.5 flex flex-col items-center justify-center transition active-letter glow-hover">
+                            <span class="text-3xl font-black text-indigo-400 group-hover:text-white transition-colors">ş</span>
+                            <span class="text-[11px] text-slate-400 group-hover:text-indigo-100 mt-1 font-semibold flex items-center gap-1">
+                                Kichik <i class="fa-regular fa-copy text-[10px]"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="text-[11px] text-slate-400 text-center pt-1 border-t border-slate-800/80">
+                        Misol: <span class="text-slate-200 font-medium">Şahar, şamol, quyosh</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 2: Matn O'girgich (Converter) -->
+        <section id="converter" class="bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-6 space-y-4 shadow-xl relative overflow-hidden">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+                <div>
+                    <h2 class="text-sm font-extrabold text-white uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-arrows-rotate text-indigo-400"></i>
+                        Matn O'girgich (Konvertor)
+                    </h2>
+                    <p class="text-xs text-slate-400">Yozilgan matnni bir zumda yangi yoki eski alifboga o'giring</p>
+                </div>
+
+                <!-- Mode Switcher -->
+                <div class="flex items-center gap-2 self-start sm:self-auto bg-slate-950 p-1 rounded-xl border border-slate-800">
+                    <button id="modeOldToNew" onclick="setConversionMode('oldToNew')" class="text-xs px-3 py-1.5 rounded-lg font-bold bg-indigo-600 text-white transition shadow">
+                        Eski <i class="fa-solid fa-arrow-right mx-1"></i> Yangi
+                    </button>
+                    <button id="modeNewToOld" onclick="setConversionMode('newToOld')" class="text-xs px-3 py-1.5 rounded-lg font-medium text-slate-400 hover:text-white transition">
+                        Yangi <i class="fa-solid fa-arrow-right mx-1"></i> Eski
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Input Box -->
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs">
+                        <label id="inputLabel" class="font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+                            <i class="fa-regular fa-pen-to-square text-indigo-400"></i> Kiruvchi Matn (Eski):
+                        </label>
+                        <div class="flex items-center gap-2">
+                            <span id="inputCharCount" class="text-[11px] text-slate-500">0 belgi</span>
+                            <button onclick="clearInput()" title="Tozalash" class="text-slate-400 hover:text-rose-400 text-xs px-2 py-0.5 rounded transition">
+                                <i class="fa-solid fa-trash-can mr-1"></i>Tozalash
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <textarea id="inputText" oninput="convertText()" placeholder="Matnni bu yerga yozing yoki joylang (masalan: O'zbekiston, g'alla, chiroyli, shahar)..." class="w-full h-40 p-4 text-sm bg-slate-950 border border-slate-800 rounded-2xl text-slate-200 placeholder:text-slate-600 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition resize-none"></textarea>
+                </div>
+
+                <!-- Output Box -->
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs">
+                        <label id="outputLabel" class="font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+                            <i class="fa-solid fa-square-check text-emerald-400"></i> Natija (Yangi):
+                        </label>
+                        <div class="flex items-center gap-2">
+                            <span id="outputCharCount" class="text-[11px] text-slate-500">0 belgi</span>
+                            <button onclick="copyConvertedText()" class="text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-500 px-3 py-1 rounded-lg flex items-center gap-1.5 transition active:scale-95 shadow">
+                                <i class="fa-solid fa-copy"></i> Nusxalash
+                            </button>
+                        </div>
+                    </div>
+
+                    <textarea id="outputText" readonly placeholder="Natija avtomatik paydo bo'ladi (Özbekiston, ğalla, çiroyli, şahar)..." class="w-full h-40 p-4 text-sm bg-indigo-950/20 border border-indigo-500/30 text-indigo-100 font-medium rounded-2xl outline-none transition resize-none"></textarea>
+                </div>
+            </div>
+
+            <!-- Quick sample buttons -->
+            <div class="flex flex-wrap items-center gap-2 pt-2 text-xs">
+                <span class="text-slate-500 font-medium">Namuna sinab ko'rish:</span>
+                <button onclick="insertSample('O\'zbekiston Respublikasi — go\'zal va boy o\'lka.')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-lg border border-slate-700 transition">
+                    «O'zbekiston Respublikasi»
+                </button>
+                <button onclick="insertSample('Choyxonada shirin choy ichdik va g\'alaba qozondik.')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-lg border border-slate-700 transition">
+                    «Choyxonada shirin...»
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Barcha Harflar Grid (Katta va Kichik) -->
+        <section class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                    <h2 class="text-sm font-extrabold text-white uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-table-cells text-indigo-400"></i>
+                        To'liq Alifbo (Yonma-yon)
+                    </h2>
+                    <p class="text-xs text-slate-400">Har bir harfning katta va kichik shakli bir joyda</p>
+                </div>
+
+                <!-- Search filter -->
+                <div class="relative w-full sm:w-64">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-500 text-xs"></i>
+                    <input type="text" id="searchInput" oninput="filterAlphabet()" placeholder="Harf yoki izoh qidirish..." class="bg-slate-900 border border-slate-800 text-xs text-slate-200 rounded-xl pl-9 pr-4 py-2.5 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 w-full transition">
+                </div>
+            </div>
+
+            <div id="fullAlphabetGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+                <!-- JS generated letter cards -->
+            </div>
+        </section>
+
+        <!-- SECTION 4: SEO & Axborot qismi (Islohot haqida qo'llanma) -->
+        <section id="guide" class="bg-slate-900/60 border border-slate-800/80 rounded-3xl p-6 sm:p-8 space-y-6">
+            <div>
+                <h2 class="text-base sm:text-lg font-black text-white flex items-center gap-2">
+                    <i class="fa-solid fa-circle-question text-indigo-400"></i>
+                    O'zbek Alifbosi Islohoti Haqida Ma'lumot
+                </h2>
+                <p class="text-xs text-slate-400 mt-1">Yangi lotin yozuviga kiritilgan o'zgarishlarning qisqacha jadvali</p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs sm:text-sm border-collapse">
+                    <thead>
+                        <tr class="border-b border-slate-800 text-slate-400 font-bold uppercase tracking-wider">
+                            <th class="py-3 px-3">Eski ko'rinish</th>
+                            <th class="py-3 px-3">Yangi ko'rinish</th>
+                            <th class="py-3 px-3">Belgi nomi</th>
+                            <th class="py-3 px-3">Misol</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/60 text-slate-300">
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="py-3 px-3 font-mono font-bold text-amber-300">O' o'</td>
+                            <td class="py-3 px-3 font-bold text-indigo-400 text-base">Ö ö</td>
+                            <td class="py-3 px-3 text-slate-400">O harfi ustida ikki nuqta (Umlaut)</td>
+                            <td class="py-3 px-3">Özbekiston, ösimlik, köz</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="py-3 px-3 font-mono font-bold text-amber-300">G' g'</td>
+                            <td class="py-3 px-3 font-bold text-indigo-400 text-base">Ğ ğ</td>
+                            <td class="py-3 px-3 text-slate-400">G harfi ustida yoy (Breve)</td>
+                            <td class="py-3 px-3">Ğalaba, boğ, toğ</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="py-3 px-3 font-mono font-bold text-amber-300">Ch ch</td>
+                            <td class="py-3 px-3 font-bold text-indigo-400 text-base">Ç ç</td>
+                            <td class="py-3 px-3 text-slate-400">C harfi tagida sedilla belgisi</td>
+                            <td class="py-3 px-3">Çayxana, çiroq, burchak</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="py-3 px-3 font-mono font-bold text-amber-300">Sh sh</td>
+                            <td class="py-3 px-3 font-bold text-indigo-400 text-base">Ş ş</td>
+                            <td class="py-3 px-3 text-slate-400">S harfi tagida sedilla belgisi</td>
+                            <td class="py-3 px-3">Şahar, şamol, quyosh</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-indigo-950/30 border border-indigo-500/20 rounded-2xl p-4 text-xs text-indigo-200 leading-relaxed flex items-start gap-3">
+                <i class="fa-solid fa-circle-info text-indigo-400 text-base mt-0.5"></i>
+                <div>
+                    <strong>Nega bu o'zgarishlar kiritildi?</strong> 
+                    Avvalgi harf birikmalari (Ch, Sh) va tutuq belgilari (O', G') raqamli muhitda, qidiruv tizimlarida va xalqaro turkiy alifbolar bilan integratsiyada noqulaylik tug'dirar edi. Yangi yakka harflar yozish tezligini oshiradi va matn hajmini qisqartiradi.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 space-y-2">
+        <p class="font-medium text-slate-400">O'zbek alifbosi yangi harflarini qulay nusxalash va onlayn matn o'girish vositasi</p>
+        <p class="text-[11px] text-slate-600">Barcha huquqlar ochiq • Ochiq manbali loyiha (Open Source)</p>
+    </footer>
+
+    <!-- Toast Notification (Zamonaviy) -->
+    <div id="toast" class="toast fixed bottom-6 right-6 z-50 bg-slate-900 text-white border border-indigo-500/50 px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 backdrop-blur-xl">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 text-white flex items-center justify-center text-base font-bold shadow-md shadow-indigo-500/30">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+            <div id="toastMessage" class="text-xs font-bold text-white">Nusxalandi!</div>
+            <div id="toastSubMessage" class="text-[11px] text-slate-400">Vaqtinchalik xotiraga olindi</div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        const fullAlphabet = [
+            { upper: 'Ö', lower: 'ö', special: true, note: "O' o' (Umlaut)" },
+            { upper: 'Ğ', lower: 'ğ', special: true, note: "G' g' (Breve)" },
+            { upper: 'Ç', lower: 'ç', special: true, note: "Ch ch (Sedilla)" },
+            { upper: 'Ş', lower: 'ş', special: true, note: "Sh sh (Sedilla)" },
+            { upper: 'ʼ', lower: 'ʼ', special: true, note: "Tutuq belgisi" },
+            { upper: 'A', lower: 'a' },
+            { upper: 'B', lower: 'b' },
+            { upper: 'D', lower: 'd' },
+            { upper: 'E', lower: 'e' },
+            { upper: 'F', lower: 'f' },
+            { upper: 'G', lower: 'g' },
+            { upper: 'H', lower: 'h' },
+            { upper: 'I', lower: 'i' },
+            { upper: 'J', lower: 'j' },
+            { upper: 'K', lower: 'k' },
+            { upper: 'L', lower: 'l' },
+            { upper: 'M', lower: 'm' },
+            { upper: 'N', lower: 'n' },
+            { upper: 'O', lower: 'o' },
+            { upper: 'P', lower: 'p' },
+            { upper: 'Q', lower: 'q' },
+            { upper: 'R', lower: 'r' },
+            { upper: 'S', lower: 's' },
+            { upper: 'T', lower: 't' },
+            { upper: 'U', lower: 'u' },
+            { upper: 'V', lower: 'v' },
+            { upper: 'X', lower: 'x' },
+            { upper: 'Y', lower: 'y' },
+            { upper: 'Z', lower: 'z' }
+        ];
+
+        let conversionMode = 'oldToNew'; // 'oldToNew' | 'newToOld'
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderAlphabetGrid(fullAlphabet);
+        });
+
+        // Render Alphabet with side-by-side buttons
+        function renderAlphabetGrid(list) {
+            const container = document.getElementById('fullAlphabetGrid');
+            container.innerHTML = '';
+
+            list.forEach(item => {
+                const card = document.createElement('div');
+                const isSpecial = item.special;
+                
+                card.className = `p-3 rounded-2xl border transition-all duration-200 flex flex-col justify-between gap-2 ${
+                    isSpecial 
+                    ? 'bg-gradient-to-b from-indigo-950/40 to-slate-900 border-indigo-500/40 hover:border-indigo-400 shadow-sm' 
+                    : 'bg-slate-900/80 border-slate-800 hover:border-slate-700'
+                }`;
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between px-1">
+                        <span class="text-[10px] font-bold ${isSpecial ? 'text-indigo-400' : 'text-slate-500'}">
+                            ${item.note ? item.note : 'Harf'}
+                        </span>
+                        <i class="fa-regular fa-copy text-[10px] text-slate-600"></i>
+                    </div>
+                    <div class="grid grid-cols-2 gap-1.5">
+                        <button onclick="copyText('${item.upper}', 'Katta ${item.upper}')" title="Katta ${item.upper}" class="bg-slate-950 hover:bg-indigo-600 border border-slate-800 hover:border-indigo-500 text-slate-100 hover:text-white rounded-xl py-2 font-black text-lg transition active-letter flex items-center justify-center shadow-sm">
+                            ${item.upper}
+                        </button>
+                        <button onclick="copyText('${item.lower}', 'Kichik ${item.lower}')" title="Kichik ${item.lower}" class="bg-slate-950 hover:bg-indigo-600 border border-slate-800 hover:border-indigo-500 text-slate-300 hover:text-white rounded-xl py-2 font-bold text-lg transition active-letter flex items-center justify-center shadow-sm">
+                            ${item.lower}
+                        </button>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // Search Filter
+        function filterAlphabet() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (!query) {
+                renderAlphabetGrid(fullAlphabet);
+                return;
+            }
+            const filtered = fullAlphabet.filter(item => 
+                item.upper.toLowerCase().includes(query) || 
+                item.lower.toLowerCase().includes(query) ||
+                (item.note && item.note.toLowerCase().includes(query))
+            );
+            renderAlphabetGrid(filtered);
+        }
+
+        // Conversion mode toggle
+        function setConversionMode(mode) {
+            conversionMode = mode;
+            const btnOldToNew = document.getElementById('modeOldToNew');
+            const btnNewToOld = document.getElementById('modeNewToOld');
+            const inLabel = document.getElementById('inputLabel');
+            const outLabel = document.getElementById('outputLabel');
+
+            if (mode === 'oldToNew') {
+                btnOldToNew.className = 'text-xs px-3 py-1.5 rounded-lg font-bold bg-indigo-600 text-white transition shadow';
+                btnNewToOld.className = 'text-xs px-3 py-1.5 rounded-lg font-medium text-slate-400 hover:text-white transition';
+                inLabel.innerHTML = '<i class="fa-regular fa-pen-to-square text-indigo-400"></i> Kiruvchi Matn (Eski):';
+                outLabel.innerHTML = '<i class="fa-solid fa-square-check text-emerald-400"></i> Natija (Yangi):';
+            } else {
+                btnNewToOld.className = 'text-xs px-3 py-1.5 rounded-lg font-bold bg-indigo-600 text-white transition shadow';
+                btnOldToNew.className = 'text-xs px-3 py-1.5 rounded-lg font-medium text-slate-400 hover:text-white transition';
+                inLabel.innerHTML = '<i class="fa-regular fa-pen-to-square text-indigo-400"></i> Kiruvchi Matn (Yangi):';
+                outLabel.innerHTML = '<i class="fa-solid fa-square-check text-emerald-400"></i> Natija (Eski):';
+            }
+
+            convertText();
+        }
+
+        // Auto Convert Function
+        function convertText() {
+            const input = document.getElementById('inputText').value;
+            
+            // Character counts
+            document.getElementById('inputCharCount').textContent = `${input.length} belgi`;
+
+            let converted = '';
+
+            if (conversionMode === 'oldToNew') {
+                converted = input
+                    // O' -> Ö
+                    .replace(/O['’‘`]/g, 'Ö')
+                    .replace(/o['’‘`]/g, 'ö')
+                    // G' -> Ğ
+                    .replace(/G['’‘`]/g, 'Ğ')
+                    .replace(/g['’‘`]/g, 'ğ')
+                    // Ch -> Ç
+                    .replace(/CH/g, 'Ç')
+                    .replace(/Ch/g, 'Ç')
+                    .replace(/ch/g, 'ç')
+                    // Sh -> Ş
+                    .replace(/SH/g, 'Ş')
+                    .replace(/Sh/g, 'Ş')
+                    .replace(/sh/g, 'ş');
+            } else {
+                converted = input
+                    .replace(/Ö/g, "O'")
+                    .replace(/ö/g, "o'")
+                    .replace(/Ğ/g, "G'")
+                    .replace(/ğ/g, "g'")
+                    .replace(/Ç/g, "Ch")
+                    .replace(/ç/g, "ch")
+                    .replace(/Ş/g, "Sh")
+                    .replace(/ş/g, "sh");
+            }
+
+            document.getElementById('outputText').value = converted;
+            document.getElementById('outputCharCount').textContent = `${converted.length} belgi`;
+        }
+
+        function clearInput() {
+            document.getElementById('inputText').value = '';
+            document.getElementById('outputText').value = '';
+            document.getElementById('inputCharCount').textContent = '0 belgi';
+            document.getElementById('outputCharCount').textContent = '0 belgi';
+            document.getElementById('inputText').focus();
+        }
+
+        function insertSample(sampleText) {
+            document.getElementById('inputText').value = sampleText;
+            convertText();
+        }
+
+        function copyConvertedText() {
+            const output = document.getElementById('outputText').value;
+            if (!output || output.trim() === '') {
+                showToast('Matn mavjud emas', 'Avval matn kiriting');
+                return;
+            }
+            copyText(output, "O'girilgan matn");
+        }
+
+        function copyAllNewLetters() {
+            copyText('Ö ö Ğ ğ Ç ç Ş ş', 'Barcha yangi harflar');
+        }
+
+        // Universal Copy Function with modern navigator.clipboard fallback
+        async function copyText(text, label) {
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(text);
+                } else {
+                    const dummy = document.createElement("textarea");
+                    document.body.appendChild(dummy);
+                    dummy.value = text;
+                    dummy.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(dummy);
+                }
+                showToast(`«${text}» nusxalandi!`, `${label} buferga saqlandi`);
+            } catch (err) {
+                showToast("Xatolik", "Nusxalab bo'lmadi");
+            }
+        }
+
+        // Share App
+        function shareApp() {
+            if (navigator.share) {
+                navigator.share({
+                    title: "Yangi O'zbek Alifbosi Harflari",
+                    text: "Yangi o'zbek lotin alifbosi harflarini tezkor nusxalash va matn o'girgich:",
+                    url: window.location.href
+                }).catch(() => {});
+            } else {
+                copyText(window.location.href, "Sayt havolasi");
+            }
+        }
+
+        // Toast System
+        let toastTimeout;
+        function showToast(title, subtitle) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').textContent = title;
+            document.getElementById('toastSubMessage').textContent = subtitle;
+
+            toast.classList.add('show');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
