@@ -129,15 +129,15 @@
 
     <!-- Header Section -->
     <header class="bg-slate-900/80 backdrop-blur-xl border-b border-slate-800/80 sticky top-0 z-40">
-        <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between gap-4">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex flex-wrap items-center justify-between gap-x-3 gap-y-3">
             
             <!-- Logo & Brand -->
             <a href="#" class="flex items-center gap-3 group">
                 <img src="assets/brand-mark.png" alt="Yangi O'zbek Alifbosi logotipi" class="w-10 h-10 rounded-xl object-cover shadow-lg shadow-indigo-500/25 ring-1 ring-white/20 group-hover:scale-105 transition-transform duration-300">
                 <div>
-                    <h1 class="text-base sm:text-lg font-extrabold text-white tracking-tight flex items-center gap-2">
+                    <h1 class="text-base sm:text-lg font-extrabold text-white tracking-tight flex items-center gap-2 whitespace-nowrap">
                         O'zbek Alifbosi
-                        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-gradient-to-r from-indigo-500/20 to-violet-500/20 text-indigo-300 border border-indigo-500/30 uppercase tracking-wider">
+                        <span class="hidden sm:inline-flex text-[10px] font-bold px-2 py-0.5 rounded-full bg-gradient-to-r from-indigo-500/20 to-violet-500/20 text-indigo-300 border border-indigo-500/30 uppercase tracking-wider">
                             Yangi Isloh
                         </span>
                     </h1>
@@ -146,19 +146,19 @@
             </a>
             
             <!-- Quick Actions -->
-            <div class="flex items-center gap-2 sm:gap-3">
-                <button onclick="copyAllNewLetters()" class="text-xs font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white px-3.5 py-2 rounded-xl transition-all duration-200 flex items-center gap-2 shadow-lg shadow-indigo-600/25 active:scale-95">
+            <div class="ml-auto flex shrink-0 items-center gap-1 sm:gap-3">
+                <button onclick="copyAllNewLetters()" aria-label="Barcha yangi harflarni nusxalash" class="min-h-10 text-xs font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white px-2.5 sm:px-3.5 py-2 rounded-xl transition-all duration-200 flex items-center gap-2 shadow-lg shadow-indigo-600/25 active:scale-95">
                     <i class="fa-solid fa-copy text-indigo-200"></i>
                     <span class="hidden md:inline">Barcha yangi harflar</span>
                     <span class="md:hidden">Ö ö Ğ ğ Ç ç Ş ş</span>
                 </button>
 
-                <button onclick="shareApp()" title="Ulashish" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white p-2 sm:px-3 sm:py-2 rounded-xl border border-slate-700 transition active:scale-95 flex items-center gap-1.5">
+                <button onclick="shareApp()" aria-label="Ulashish" title="Ulashish" class="min-h-10 min-w-10 text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white p-2 sm:px-3 sm:py-2 rounded-xl border border-slate-700 transition active:scale-95 flex items-center justify-center gap-1.5">
                     <i class="fa-solid fa-share-nodes"></i>
                     <span class="hidden sm:inline">Ulashish</span>
                 </button>
 
-                <a href="https://github.com/hexjasur/ozbek-yangi-alifbosi" target="_blank" rel="noopener noreferrer" title="GitHub repository" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white p-2 sm:px-3 sm:py-2 rounded-xl border border-slate-700 transition active:scale-95 flex items-center gap-1.5">
+                <a href="https://github.com/hexjasur/ozbek-yangi-alifbosi" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository" class="min-h-10 min-w-10 text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white p-2 sm:px-3 sm:py-2 rounded-xl border border-slate-700 transition active:scale-95 flex items-center justify-center gap-1.5">
                     <i class="fa-brands fa-github"></i>
                     <span class="hidden sm:inline">GitHub</span>
                 </a>
